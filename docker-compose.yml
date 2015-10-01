@@ -1,0 +1,15 @@
+db:
+  image: mongo:latest
+  ports:
+    - 27017
+app:
+  image: node:latest
+  working_dir: /app
+  command: node app.js
+  volumes:
+    - .:/app
+  ports:
+    - "3000:3000"
+  links:
+    - db
+
