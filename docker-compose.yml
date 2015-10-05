@@ -6,7 +6,7 @@ db:
 app:
   image: node:latest
   working_dir: /app
-  command: node app.js
+  command: bash -c "npm install && node app.js"
   volumes:
     - .:/app
   ports:
