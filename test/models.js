@@ -36,7 +36,7 @@ describe('User Model', function() {
   it('should delete a user', function(done) {
     User.remove({ email: 'test@gmail.com' }, function(err) {
       if (err) return done(err);
-      done();
+      done(); 
     });
   });
 });
