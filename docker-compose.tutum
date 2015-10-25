@@ -1,15 +1,15 @@
 app:
-  image:paulopez/dockertest:latest
+  image: paulopez/hackdemo:latest
   links:
     - db
   ports:
-    - 3000:3000
+    - 80:3000
   tags:
-    - deployment
+    - production
 db:
   image: mongo:latest
   command: --smallfiles
   ports:
     - 27017:27017
   tags:
-    - db_deployment
+    - production
