@@ -5,7 +5,7 @@ var User = require('../models/User');
 describe('User Model', function() {
   it('should create a new user', function(done) {
     var user = new User({
-      email: 'test@gmail.com',
+      email: 'test@gmail.com_break',
       password: 'password'
     });
     user.save(function(err) {
