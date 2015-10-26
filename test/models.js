@@ -5,7 +5,7 @@ var User = require('../models/User');
 describe('User Model', function() {
   it('should create a new user', function(done) {
     var user = new User({
-      email: 'test@gmail.com_break',
+      email: 'test@gmail.com',
       password: 'password'
     });
     user.save(function(err) {
@@ -28,7 +28,7 @@ describe('User Model', function() {
   it('should find user by email', function(done) {
     User.findOne({ email: 'test@gmail.com' }, function(err, user) {
       if (err) return done(err);
-      user.email.should.equal('test@gmail.com');
+      user.email.should.equal('test@gmail.com_breakHERE');
       done();
     });
   });
